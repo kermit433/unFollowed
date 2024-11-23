@@ -1,0 +1,321 @@
+/* General styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    width: 100%;
+    background-color: #4a90e2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar-item {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.navbar-item:hover {
+    background-color: #357ABD;
+    color: #f0f8ff;
+}
+
+/* Main Content Styles */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #222222;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4a90e2;
+    border: 2px solid #4a90e2;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #357ABD;
+    border-color: #357ABD;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Dropzone Styles */
+.dropzone {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    border: 4px dashed #4a90e2;
+    border-radius: 12px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4a90e2;
+    background-color: #f7f9fc;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dropzone.dragover {
+    border-color: #357ABD;
+    background-color: #eef5fc;
+    color: #357ABD;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Results Section */
+#results {
+    margin-top: 30px;
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333333;
+    margin-top: 20px;
+}
+
+#status {
+    font-size: 1rem;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.error {
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Results Lists */
+#results ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background-color: #f7f9fc;
+    padding: 10px;
+}
+
+#results li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+#results li:last-child {
+    border-bottom: none;
+}
+
+/* Hidden Inputs */
+#folder-input,
+#zip-input {
+    display: none;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.modal button {
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: white;
+}
+
+.modal button#folder-option {
+    background-color: #4a90e2;
+}
+
+.modal button#folder-option:hover {
+    background-color: #357ABD;
+}
+
+.modal button#zip-option {
+    background-color: #28a745;
+}
+
+.modal button#zip-option:hover {
+    background-color: #218838;
+}
+
+.modal button#cancel-button {
+    background-color: #e74c3c;
+}
+
+.modal button#cancel-button:hover {
+    background-color: #c0392b;
+}
+
+/* Button Hover Effects */
+button {
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+button:hover {
+    opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+/* Instructions Block */
+.instructions-block {
+    margin: 20px auto;
+    max-width: 800px; /* Restrict width for better readability */
+    text-align: left;
+    background-color: #ffffff; /* White background for the block */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the block */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    line-height: 1.8; /* Line spacing for readability */
+}
+
+.instructions-block p {
+    font-size: 1.25rem; /* Larger text for instructions */
+    color: #555555; /* Neutral gray for descriptions */
+    margin-bottom: 15px; /* Spacing between steps */
+}
+
+.step-number {
+    font-size: 1.5rem; /* Larger size for step numbers */
+    font-weight: 700; /* Bold for emphasis */
+    color: #4a90e2; /* Accent color for step numbers */
+    margin-right: 10px; /* Space between step number and description */
+}
+
+.instructions-block a {
+    color: #4a90e2; /* Accent color for links */
+    text-decoration: none;
+    font-weight: 600; /* Slightly bold links */
+    transition: color 0.3s ease-in-out;
+}
+
+.instructions-block a:hover {
+    color: #357ABD; /* Darker accent on hover */
+}

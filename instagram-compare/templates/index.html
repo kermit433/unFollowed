@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Followers Comparator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <span href="/" class="navbar-brand">UnFollowed</span>
+        </div>
+        <div class="navbar-right">
+            <a href="/about" class="navbar-item">About</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>View who doesn't follow you back on Instagram</h1>
+        <p>
+            To get your Instagram data ZIP, click the button below:
+        </p>
+        <a href="https://accountscenter.instagram.com/info_and_permissions/dyi/" target="_blank" class="button">
+            Get My Data
+        </a>
+        <p>
+            To see who doesn't follow you back and who you don't follow back, drag and drop your ZIP file or folder below or click to select upload:
+        </p>
+        <div class="dropzone" id="dropzone">Drop your ZIP file or folder here or click to select</div>
+        <input type="file" id="folder-input" webkitdirectory multiple>
+        <input type="file" id="zip-input" accept=".zip">
+
+        <!-- Results Section -->
+        <div id="results" style="display: none;">
+            <h3>Status:</h3>
+            <p id="status"></p>
+            <h3>Not Following Me Back:</h3> <!-- Placeholder, will be updated dynamically -->
+            <ul id="not-following-back"></ul>
+            <h3>Not Followed Back:</h3> <!-- Placeholder, will be updated dynamically -->
+            <ul id="not-followed-back"></ul>
+        </div>
+        
+        
+        <div class="instructions-block">
+            <h1>Instructions</h1>
+            <p> 1. Click the <strong> Get my data </strong> button above  to go to Instagram's account center</p>
+            <p> 2. Click <strong>Download or Transfer Information</strong>. For the fastest export, select <strong>Some of Your Information → Followers and Following → Download to device → Date range: All time → Create files </strong>.</p>
+            <p> 3. You will receive an email from Instagram when your data is ready. Download the folder or zip and drag/drop or upload it above.
+            <div style="text-align: center;">
+                <h2>Export demo:</h2>
+                <img src="/static/images/infodownload.gif" alt="Instruction GIF" style="width: 400px; height: auto;">
+            </div>
+
+        
+        </div>
+    </div>
+
+    
+
+    <!-- Modal Dialog -->
+    <div id="modal-overlay" class="modal-overlay" style="display: none;">
+        <div class="modal">
+            <h2>Select an option</h2>
+            <button id="folder-option">Folder</button>
+            <button id="zip-option">Zip</button>
+            <button id="cancel-button">Cancel</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

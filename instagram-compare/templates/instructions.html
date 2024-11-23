@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="/" class="navbar-brand">Followtrack</a> <!-- Acts as the home button -->
+        </div>
+        <div class="navbar-right">
+            <a href="/instructions" class="navbar-item">Instructions</a>
+            <a href="#about" class="navbar-item">About</a>
+            <a href="#contact" class="navbar-item">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Instructions</h1>
+        <div class="instructions-block">
+            <p> Go to Instagram's <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Faccountscenter.instagram.com%2Finfo_and_permissions%2Fdyi%2F%3F__coig_login%3D1" target="_blank">Accounts Center</a></p>
+            <p> Click <strong>Download or Transfer Information</strong>. For the fastest export, select <strong>Some of Your Information → Followers and Following → Download to device → Date range: All time → Create files </strong>.</p>
+            <p> You will receive an email from Instagram when your data is ready. Download the folder or zip and upload it to the <a href="/" target="_blank">Followers Checker</a> </p>
+        </div>
+    </div>
+</body>
+</html>
